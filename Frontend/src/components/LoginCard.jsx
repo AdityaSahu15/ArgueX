@@ -55,17 +55,13 @@ const LoginCard = () => {
       setTimeout(() => {
         navigate("/");
         window.location.reload();
-      }, 3000);
+      }, 2000);
     } catch (error) {
       console.error("Error:", error);
       toast.error("An unexpected error occurred. Please try again.");
     }
   }
 
-  const handleTestLogin = () => {
-    setEmail("testuser2025@gmail.com");
-    setPassword("12345678");
-  };
 
   return (
     <div className="w-full max-w-md space-y-6 px-4 sm:px-8 lg:px-12">
@@ -142,17 +138,6 @@ const LoginCard = () => {
           Log in
         </Button>
       </form>
-
-      {/* Test Login */}
-      <div className="text-center text-sm text-gray-400 mt-6">
-        Or use the test login
-      </div>
-      <Button
-        onClick={handleTestLogin}
-        className="w-full bg-gray-500 hover:bg-gray-600 text-white rounded-full py-3 font-bold"
-      >
-        Test Login
-      </Button>
 
       {/* Footer */}
       <p
