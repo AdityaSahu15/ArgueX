@@ -1,0 +1,30 @@
+{
+  "name": "vox-debate-backend",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Backend of our application",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon -r dotenv/config --experimental-json-modules src/index.js",
+    "client": "npm run dev --prefix ../Frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "Rhitam Chaudhury",
+  "license": "MIT",
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "axios": "^1.11.0",
+    "bcrypt": "^5.1.1",
+    "concurrently": "^9.2.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.18.0",
+    "mongoose": "^8.17.1",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^3.1.10",
+    "prettier": "^3.6.2"
+  }
+}
